@@ -1,1 +1,1 @@
-# Omar.Duran.github.io
+# OmarDuran.github.io
