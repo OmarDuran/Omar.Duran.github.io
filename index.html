@@ -71,6 +71,7 @@
   <section id="profile">
     <div class="profile-pic" style="background-image: url('https://avatars.githubusercontent.com/u/11821987?v=4'); background-size: cover;"></div>
     <h1>Omar Duran</h1>
+    <p> A computational mechanician with a solid foundation in reservoir engineering, continuum mechanics, applied mathematics, and finite element methods. </p>
     <p><strong>Current Position:</strong> Research Scientist, Department of Energy Science and Engineering, Stanford University</p>
     <p><strong>Email:</strong> <a href="mailto:oduran@stanford.edu">oduran@stanford.edu</a></p>
   </section>
@@ -87,6 +88,7 @@
   <!-- Tabbed Navigation -->
   <div class="tabs">
     <div class="tab active" onclick="showTab('research-interests')">Research Interests</div>
+    <div class="tab" onclick="showTab('projects')">Projects</div>    
     <div class="tab" onclick="showTab('publications')">Publications</div>
     <div class="tab" onclick="showTab('talks')">Talks</div>
     <div class="tab" onclick="showTab('advisees')">Student Advisees</div>
@@ -98,9 +100,29 @@
   <div id="research-interests" class="tab-content active">
     <section>
       <h2>Research Interests</h2>
-      <p>List your research interests here, such as machine learning, algorithms, etc.</p>
+
+    <!-- First Paragraph -->
+    <p>
+I specialize in computational mechanics, emphasizing the development of numerical schemes for solving partial differential equations (PDEs), particularly utilizing finite element techniques. My expertise includes multiphase and compositional flow, geomechanics, reservoir simulation, and computational plasticity.
+    </p>
+
+    <!-- Second Paragraph -->
+    <p>
+My research interests are closely tied to the mathematical foundations of numerical methods, particularly finite element methods and their connections to other approximation techniques. I am actively engaged in the study of mixed-dimensional partial differential equations (PDEs) and high-order approximations in both time and space. Additionally, I investigate formulations for compositional multiphase problems, with a specific emphasis on variables related to flash specifications, including the overall composition formulation. Furthermore, I am interested in devising schemes for non-standard Cauchy media, such as Cosserat elasticity and micropolar media.
+    </p>
     </section>
   </div>
+
+
+  <!-- Research Interests Tab -->
+  <div id="projects" class="tab-content">
+    <section>
+      <h2>Projects</h2>
+  <p>
+    I developed a finite element library for multiphysics applications, utilizing automatic differentiation and a collection of finite elements supported by <a href="https://github.com/FEniCS/basix" target="_blank">basix</a>. This library is particularly valuable for prototyping finite element methods for multiphysics problems and extensively explores the concept of graphs and their connections with differential complexes. For more information, please refer to the repository: <a href="https://github.com/OmarDuran/nfempy" target="_blank">nfempy</a>.
+  </p>
+</section>
+  </div>  
 
   <!-- Publications Tab -->
   <div id="publications" class="tab-content">
