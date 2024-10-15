@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      background-color: #ccc; /* Placeholder color */
+    }
+    h1, h2 {
+      color: #333;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+    }
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #ddd;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .tab:hover {
+      background-color: #ccc;
+    }
+    .tab.active {
+      background-color: #fff;
+      border-bottom: 2px solid #fff;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <section id="profile">
+    <div class="profile-pic" style="background-image: url('path_to_your_picture.jpg'); background-size: cover;"></div>
+    <h1>Your Name</h1>
+    <p><strong>Current Position:</strong> Your Title, Department, University</p>
+    <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>PhD in Computer Science</strong>, University of XYZ, 20XX</p>
+    <p><strong>Master's in Computer Science</strong>, University of ABC, 20XX</p>
+    <!-- Add more education entries as needed -->
+  </section>
+
+  <!-- Tabbed Navigation -->
+  <div class="tabs">
+    <div class="tab active" onclick="showTab('research-interests')">Research Interests</div>
+    <div class="tab" onclick="showTab('publications')">Publications</div>
+    <div class="tab" onclick="showTab('advisees')">Student Advisees</div>
+  </div>
+
+  <!-- Tab Content -->
+
+  <!-- Research Interests Tab -->
+  <div id="research-interests" class="tab-content active">
+    <section>
+      <h2>Research Interests</h2>
+      <p>List your research interests here, such as machine learning, algorithms, etc.</p>
+    </section>
+  </div>
+
+  <!-- Publications Tab -->
+  <div id="publications" class="tab-content">
+    <section>
+      <h2>Publications</h2>
+      <ul>
+        <li><strong>Author A, Author B</strong>. "Title of the paper." <i>Journal Name</i>, 20XX.</li>
+        <li><strong>Author C, Author D</strong>. "Title of another paper." <i>Conference Name</i>, 20XX.</li>
+        <!-- Add more publications as needed -->
+      </ul>
+    </section>
+  </div>
+
+  <!-- Student Advisees Tab -->
+  <div id="advisees" class="tab-content">
+    <section>
+      <h2>Student Advisees</h2>
+      <ul>
+        <li><strong>Student A</strong> - Master's Thesis: "Title of Thesis" (20XX)</li>
+        <li><strong>Student B</strong> - PhD Dissertation: "Title of Dissertation" (20XX)</li>
+        <!-- Add more advisees as needed -->
+      </ul>
+    </section>
+  </div>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p>Feel free to get in touch via email or through my <a href="https://github.com/yourusername">GitHub</a> profile.</p>
+  </section>
+</div>
+
+<script>
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    contents.forEach(content => {
+      content.classList.remove('active');
+    });
+
+    document.querySelector(`#${tabId}`).classList.add('active');
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
